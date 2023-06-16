@@ -20,4 +20,11 @@ import { useCounterStore } from '@/stores/counter'
 const store = useCounterStore()
 // 可參照 pinia: storeToRefs or vue: toRef 來得到響應式
 const count = store.count
+
+// 與watch相同, pinia的特殊用法
+store.$subscribe((mutation, state) => {
+  if (state.count > 5) {
+    state.count = 0
+  }
+})
 </script>
