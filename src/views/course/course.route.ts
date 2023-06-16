@@ -3,6 +3,7 @@ import MockView from '@/views/course/MockView.vue'
 import CountView from '@/views/course/count/CountView.vue'
 import PropView from '@/views/course/prop/PropView.vue'
 import ErrorView from '@/views/course/ErrorView.vue'
+import PiniaView from '@/views/course/PiniaView.vue'
 
 export const MOCK_VIEW: RouteRecordRaw = {
   path: '/mockView',
@@ -29,5 +30,12 @@ export const ERROR_VIEW: RouteRecordRaw = {
   path: '/errorView/:errorCode',
   name: 'ERROR_VIEW',
   component: ErrorView,
+  props: true
+}
+
+export const PINIA_VIEW: RouteRecordRaw = {
+  path: '/piniaView',
+  name: 'PINIA_VIEW',
+  component: PiniaView,
   props: true
 }

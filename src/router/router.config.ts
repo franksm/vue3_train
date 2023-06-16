@@ -1,4 +1,10 @@
-import { MOCK_VIEW, COUNT_VIEW, PROP_VIEW, ERROR_VIEW } from '@/views/course/course.route'
+import {
+  MOCK_VIEW,
+  COUNT_VIEW,
+  PROP_VIEW,
+  ERROR_VIEW,
+  PINIA_VIEW
+} from '@/views/course/course.route'
 import { LOGIN_VIEW } from '@/views/login/login.route'
 
 import Home from '@/views/course/HomeView.vue'
@@ -10,7 +16,7 @@ const routes: Array<RouteRecordRaw> = [
     path: '/home',
     name: 'HOME',
     component: Home,
-    children: [MOCK_VIEW, COUNT_VIEW, PROP_VIEW, ERROR_VIEW]
+    children: [MOCK_VIEW, COUNT_VIEW, PROP_VIEW, ERROR_VIEW, PINIA_VIEW]
   }
 ]
 

@@ -13,7 +13,7 @@
 <script lang="ts" setup>
 import Api from '@/api/Api'
 import type { dataVo } from '@/views/course/type/course'
-import { ref } from 'vue';
+import { ref } from 'vue'
 
 const data = ref({} as dataVo)
 

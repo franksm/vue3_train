@@ -9,6 +9,5 @@
 import TheNavbar from '@/views/layout/TheNavbar.vue'
 import { provide } from 'vue'
 
-provide('name', "Frank");
-
+provide('name', 'Frank')
 </script>

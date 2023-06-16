@@ -10,7 +10,11 @@
                 <el-input v-model="form.name" placeholder="name" disabled></el-input>
               </el-form-item>
               <el-form-item prop="password">
-                <el-input v-model="form.password" placeholder="password" @change="change"></el-input>
+                <el-input
+                  v-model="form.password"
+                  placeholder="password"
+                  @change="change"
+                ></el-input>
               </el-form-item>
             </el-form>
             <el-button @click="goHome">goHome</el-button>
@@ -24,7 +28,7 @@
 <script lang="ts" setup>
 import { watchEffect } from 'vue'
 import { useLoginForm } from '@/views/login/useLoginForm'
-import router from '@/router';
+import router from '@/router'
 
 const props = defineProps({
   name: { type: String, default: '' }
@@ -49,12 +53,11 @@ const goHome = () => {
 //   }
 // );
 
-watchEffect(()=>{
-    form.value.name = props.name
+watchEffect(() => {
+  form.value.name = props.name
 })
 
 defineExpose({
   goHome
 })
-
 </script>

@@ -20,6 +20,5 @@
 import { useCount } from '@/views/course/count/useCount'
 
 // 針對功能與邏輯重複使用 Compostion API 能有效地處理
-const {add, count} = useCount()
-
+const { add, count } = useCount()
 </script>

@@ -6,6 +6,7 @@
         <el-button @click="goCountView"> 第二課Composition API</el-button>
         <el-button @click="goPropView"> 第三課Prop/emits</el-button>
         <el-button @click="goErrorView"> 第四課錯誤頁</el-button>
+        <el-button @click="goPiniaView"> 第五課全域參數</el-button>
       </el-col>
     </el-row>
   </div>
@@ -38,6 +39,12 @@ const goErrorView = () => {
   router.push({
     name: 'ERROR_VIEW',
     params: { errorCode: '999' }
+  })
+}
+
+const goPiniaView = () => {
+  router.push({
+    name: 'PINIA_VIEW'
   })
 }
 </script>

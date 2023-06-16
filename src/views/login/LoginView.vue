@@ -28,6 +28,5 @@
 import { useLoginForm } from '@/views/login/useLoginForm'
 
 // 注意看這邊
-const { form, rules, login} = useLoginForm()
-
+const { form, rules, login } = useLoginForm()
 </script>
