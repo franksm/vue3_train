@@ -30,6 +30,8 @@ import { watchEffect } from 'vue'
 import { useLoginForm } from '@/views/login/useLoginForm'
 import router from '@/router'
 
+const emit = defineEmits(['update:password'])
+
 const props = defineProps({
   name: { type: String, default: '' }
 })
@@ -38,6 +40,7 @@ const { form } = useLoginForm()
 
 const change = () => {
   // 呼叫emit，回傳給父組件
+  emit('update:password', form.value.password)
 }
 
 const goHome = () => {

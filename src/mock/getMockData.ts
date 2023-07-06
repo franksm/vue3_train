@@ -5,7 +5,8 @@ const getData = {
   method: 'get',
   response: () => {
     return {
-      name: 'frank'
+      name: 'frank',
+      code: 200
     }
   }
 }

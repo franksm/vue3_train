@@ -8,7 +8,7 @@
     <emp-basic-form ref="empBasicFormRef" @password="form.password" :name="form.name">
     </emp-basic-form>
     <el-button @click="showInfo">顯示資訊</el-button>
-    <el-button v-if="empBasicFormRef" @click="goHomeView">子組件的GOHOME</el-button>
+    <el-button @click="goHomeView">子組件的GOHOME</el-button>
   </div>
 </template>
 
@@ -29,6 +29,7 @@ const showInfo = () => {
 
 const goHomeView = () => {
   // 呼叫子組件方法
+  empBasicFormRef.value.goHome()
 }
 
 onMounted(async () => {

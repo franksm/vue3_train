@@ -16,9 +16,14 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, watchEffect } from 'vue'
+import { useRoute } from 'vue-router'
 
+const route = useRoute()
 const errorCode = ref('errorCode' as string)
 
 // 取得導頁時的param參數並賦予errorCode
+watchEffect(() => {
+  errorCode.value = route.params.errorCode as string
+})
 </script>

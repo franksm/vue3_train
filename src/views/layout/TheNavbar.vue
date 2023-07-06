@@ -39,7 +39,7 @@ const goPropView = () => {
 const goErrorView = () => {
   router.push({
     name: 'ERROR_VIEW',
-    params: { errorCode: '999' }
+    params: { errorCode: '404' }
   })
 }
 
