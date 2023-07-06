@@ -3,7 +3,8 @@ import {
   COUNT_VIEW,
   PROP_VIEW,
   ERROR_VIEW,
-  PINIA_VIEW
+  PINIA_VIEW,
+  DARK_VIEW
 } from '@/views/course/course.route'
 import { LOGIN_VIEW } from '@/views/login/login.route'
 
@@ -17,7 +18,7 @@ const routes: Array<RouteRecordRaw> = [
     path: '/home',
     name: 'HOME',
     component: Home,
-    children: [MOCK_VIEW, COUNT_VIEW, PROP_VIEW, ERROR_VIEW, PINIA_VIEW]
+    children: [MOCK_VIEW, COUNT_VIEW, PROP_VIEW, ERROR_VIEW, PINIA_VIEW, DARK_VIEW]
   },
   {
     path: '/:pathMatch(.*)*',

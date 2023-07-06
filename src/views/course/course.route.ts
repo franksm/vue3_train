@@ -4,6 +4,7 @@ import CountView from '@/views/course/count/CountView.vue'
 import PropView from '@/views/course/prop/PropView.vue'
 import ErrorView from '@/views/course/ErrorView.vue'
 import PiniaView from '@/views/course/PiniaView.vue'
+import DarkView from '@/views/course/DarkView.vue'
 
 export const MOCK_VIEW: RouteRecordRaw = {
   path: 'mockView',
@@ -37,5 +38,12 @@ export const PINIA_VIEW: RouteRecordRaw = {
   path: 'piniaView',
   name: 'PINIA_VIEW',
   component: PiniaView,
+  props: true
+}
+
+export const DARK_VIEW: RouteRecordRaw = {
+  path: 'darkView',
+  name: 'DARK_VIEW',
+  component: DarkView,
   props: true
 }

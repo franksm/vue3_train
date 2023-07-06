@@ -7,6 +7,7 @@
         <el-button @click="goPropView"> 第三課Prop/emits</el-button>
         <el-button @click="goErrorView"> 第四課錯誤頁</el-button>
         <el-button @click="goPiniaView"> 第五課全域參數</el-button>
+        <el-button @click="goDarkView"> 第六課深淺模式</el-button>
       </el-col>
     </el-row>
   </div>
@@ -45,6 +46,12 @@ const goErrorView = () => {
 const goPiniaView = () => {
   router.push({
     name: 'PINIA_VIEW'
+  })
+}
+
+const goDarkView = () => {
+  router.push({
+    name: 'DARK_VIEW'
   })
 }
 </script>

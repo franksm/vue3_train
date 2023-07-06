@@ -7,7 +7,4 @@
 
 <script lang="ts" setup>
 import TheNavbar from '@/views/layout/TheNavbar.vue'
-import { provide } from 'vue'
-
-provide('name', 'Frank')
 </script>

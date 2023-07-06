@@ -1,0 +1,5 @@
+// 1. bgColor從何而來，為何無須import
+.app {
+  background-color: var(--bgColor);
+  color: var(--txtColort);
+}
