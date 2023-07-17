@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useCounterStore } from '@/stores/counter'
+import { useCounterStore } from '@/stores/store'
 import { storeToRefs } from 'pinia'
 
 const store = useCounterStore()
@@ -29,3 +29,4 @@ store.$subscribe((mutation, state) => {
   }
 })
 </script>
+@/stores/store

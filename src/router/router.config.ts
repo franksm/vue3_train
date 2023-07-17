@@ -17,7 +17,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/home',
     name: 'HOME',
-    component: Home,
+    component: () => Home,
     children: [MOCK_VIEW, COUNT_VIEW, PROP_VIEW, ERROR_VIEW, PINIA_VIEW, DARK_VIEW]
   },
   {

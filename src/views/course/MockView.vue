@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div @mousedown.left='closeDialog'>
     <el-row>
       <el-col :span="20">
         1. 請協助修復好API
@@ -14,11 +14,16 @@
 import Api from '@/api/Api'
 import type { dataVo } from '@/views/course/type/course'
 import { ref } from 'vue'
+import { useLoadingStore } from "@/stores/store";
 
 const data = ref({} as dataVo)
+const store = useLoadingStore();
 
 const doApi = async () => {
+  store.incrementLoadingCounter();
   const res = await Api.getData()
   data.value = res.data
+
+  store.decrementLoadingCounter();
 }
 </script>

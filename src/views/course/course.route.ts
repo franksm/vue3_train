@@ -9,7 +9,7 @@ import DarkView from '@/views/course/DarkView.vue'
 export const MOCK_VIEW: RouteRecordRaw = {
   path: 'mockView',
   name: 'MOCK_VIEW',
-  component: MockView,
+  component: () => import("@/views/course/MockView.vue"),
   props: true
 }
 
