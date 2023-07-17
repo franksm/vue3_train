@@ -1,5 +1,5 @@
 <template>
-  <div @mousedown.left='closeDialog'>
+  <div>
     <el-row>
       <el-col :span="20">
         1. 請協助修復好API
