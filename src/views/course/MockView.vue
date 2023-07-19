@@ -20,10 +20,9 @@ const data = ref({} as dataVo)
 const store = useLoadingStore();
 
 const doApi = async () => {
-  store.incrementLoadingCounter();
-  const res = await Api.getData()
+  store.openLoading();
+  const res = await Api.getData();
   data.value = res.data
-
-  store.decrementLoadingCounter();
+  store.closeLoading();
 }
 </script>

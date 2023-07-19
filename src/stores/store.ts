@@ -59,5 +59,31 @@ export const useLoadingStore = defineStore('loading', () => {
     }
   }
 
-  return { isLoading, incrementLoadingCounter, decrementLoadingCounter }
+  const openLoading = () => {
+    if (!isLoading.value) {
+      enableLoadingTime = Date.now();
+      isLoading.value = true;
+    }
+  }
+
+  const closeLoading = () => {
+    if (isLoading.value) {
+      // 最短loading時間，避免loading太快，畫面閃動
+      const minLoadingTime = 400;
+      const postLoadingTime = Date.now() - enableLoadingTime;
+      // 是否低於最短loading時間
+      const isShorterMin = postLoadingTime < minLoadingTime;
+      // 剩餘loading時間
+      const remainTime = minLoadingTime - postLoadingTime;
+
+      setTimeout(
+        () => {
+          isLoading.value = false;
+        },
+        isShorterMin ? remainTime : 0
+      );
+    }
+  }
+
+  return { isLoading, openLoading, closeLoading }
 })
