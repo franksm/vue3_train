@@ -21,8 +21,12 @@ const store = useLoadingStore();
 
 const doApi = async () => {
   store.openLoading();
-  const res = await Api.getData();
-  data.value = res.data;
+  try {
+    const res = await Api.getData();
+    data.value = res.data;
+  } catch (err) {
+    store.closeLoading();
+  }
   store.closeLoading();
 }
 </script>

@@ -26,6 +26,7 @@ http.interceptors.response.use(
     if (typeof data !== 'object') {
       console.log(data)
       ElNotification.error('服務器異常!')
+      return Promise.reject(res)
     }
     if (data.code != 200) {
       if (data.message) {
@@ -33,6 +34,7 @@ http.interceptors.response.use(
       } else {
         ElNotification.error('失敗!')
       }
+      return Promise.reject(res)
     }
 
     return res
