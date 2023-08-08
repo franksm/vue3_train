@@ -6,7 +6,7 @@ const getData = {
   response: () => {
     return {
       name: 'frank',
-      code: 100
+      code: 200
     }
   }
 }
